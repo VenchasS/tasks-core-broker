@@ -7,13 +7,13 @@ namespace TaskQueue.Services
         Task<IChannel> GetChannelAsync();
     }
 
-    public class RabbitMqService : IRabbitMqService
+    public class BrokerService : IRabbitMqService
     {
         private readonly ConnectionFactory _connectionFactory;
         private IConnection? _connection;
         private IChannel? _channel;
 
-        public RabbitMqService(IConfiguration configuration)
+        public BrokerService(IConfiguration configuration)
         {
             _connectionFactory = new ConnectionFactory
             {

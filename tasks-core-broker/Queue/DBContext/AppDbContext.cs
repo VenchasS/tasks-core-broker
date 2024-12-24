@@ -10,7 +10,7 @@ namespace TaskQueue.Database
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         public DbSet<TaskItem> Tasks { get; set; }
-        public DbSet<TaskResult> TaskResults { get; set; }
+        public DbSet<Models.Models> TaskResults { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -39,7 +39,7 @@ namespace TaskQueue.Database
 
         private void ConfigureTaskResultEntity(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<TaskResult>(entity =>
+            modelBuilder.Entity<Models>(entity =>
             {
                 entity.HasKey(r => r.Id);
 

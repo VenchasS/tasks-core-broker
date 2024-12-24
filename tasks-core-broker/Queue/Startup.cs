@@ -21,9 +21,9 @@ namespace TaskQueue
             services.AddDbContext<AppDbContext>(options =>
                 options.UseNpgsql(connectionString));
 
-            services.AddSingleton<IRabbitMqService, RabbitMqService>();
+            services.AddSingleton<IRabbitMqService, BrokerService>();
             services.AddScoped<TaskRepository>();
-            services.AddScoped<TaskQueueService>();
+            services.AddScoped<QueueService>();
             services.AddSingleton<IConfiguration>(Configuration);
 
             services.AddControllers();

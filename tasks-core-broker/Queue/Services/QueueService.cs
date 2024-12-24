@@ -12,12 +12,12 @@ namespace TaskQueue.Services
 {
     
 
-    public class TaskQueueService
+    public class QueueService
     {
         private readonly IRabbitMqService _rabbitMqService;
         private readonly AppDbContext _appDbContextContext;
         
-        public TaskQueueService(IRabbitMqService rabbitMqService, AppDbContext appDbContextContext)
+        public QueueService(IRabbitMqService rabbitMqService, AppDbContext appDbContextContext)
         {
             _rabbitMqService = rabbitMqService;
             _appDbContextContext = appDbContextContext;
@@ -67,14 +67,14 @@ namespace TaskQueue.Services
             return new TaskItem();
         }
 
-        public async Task<TaskResult> GetTaskResultById(int id)
+        public async Task<Models.Models> GetTaskResultById(int id)
         {
             var task = await _appDbContextContext.Tasks.FindAsync(id);
             if (task == null)
                 throw new KeyNotFoundException("Task not found");
 
             await _appDbContextContext.SaveChangesAsync();
-            return new TaskResult();
+            return new Models.Models();
         }
 
         public async Task<List<TaskItem>> GetAllTasks()

@@ -8,12 +8,12 @@ namespace TaskQueue.Controllers
 {
     [ApiController]
     [Route("/queue")]
-    public class TaskQueueController : ControllerBase
+    public class QueueController : ControllerBase
     {
-        private readonly TaskQueueService _taskQueueService;
+        private readonly QueueService _taskQueueService;
         private readonly int _defaultTtl;
 
-        public TaskQueueController(TaskQueueService taskQueueService, IConfiguration configuration)
+        public QueueController(QueueService taskQueueService, IConfiguration configuration)
         {
             _taskQueueService = taskQueueService;
             _defaultTtl = configuration.GetValue<int>("TaskSettings:DefaultTTL");
