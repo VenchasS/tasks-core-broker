@@ -39,7 +39,7 @@ namespace Shared.Models
     public class TaskItem
     {
         public int Id { get; set; }
-        public TaskType Type { get; set; }
+        public Enums.TaskType Type { get; set; }
         public string Data { get; set; }
         public int Ttl { get; set; }
         public Enums.TaskStatus Status { get; set; }
