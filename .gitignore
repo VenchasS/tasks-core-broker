@@ -1,2 +1,4 @@
 ﻿.vs
 
+/tasks-core-broker/Task/obj
+/tasks-core-broker/Tasks/obj
