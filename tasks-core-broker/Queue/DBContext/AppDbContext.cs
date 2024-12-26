@@ -39,7 +39,7 @@ namespace TaskQueue.Database
 
         private void ConfigureTaskResultEntity(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Models>(entity =>
+            modelBuilder.Entity<Models.Models>(entity =>
             {
                 entity.HasKey(r => r.Id);
 

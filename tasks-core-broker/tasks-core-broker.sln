@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Task", "Task\Task.csproj", "{CDD2AB38-EF4E-40D2-8B99-767C69D92F8A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RESTApiGateway", "RESTApiGateway\RESTApiGateway.csproj", "{19314ED0-D0C0-4D59-92ED-8BA099CA1E2A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{CDD2AB38-EF4E-40D2-8B99-767C69D92F8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDD2AB38-EF4E-40D2-8B99-767C69D92F8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDD2AB38-EF4E-40D2-8B99-767C69D92F8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19314ED0-D0C0-4D59-92ED-8BA099CA1E2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19314ED0-D0C0-4D59-92ED-8BA099CA1E2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19314ED0-D0C0-4D59-92ED-8BA099CA1E2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19314ED0-D0C0-4D59-92ED-8BA099CA1E2A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
