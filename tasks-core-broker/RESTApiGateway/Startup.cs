@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using RESTApiGateway.Services;
+using Prometheus;
 using Microsoft.OpenApi.Models;
 using Serilog;
 
@@ -84,6 +85,14 @@ public class Startup
 
         app.UseAuthorization();
 
+        app.UseHttpMetrics(options => options.ReduceStatusCodeCardinality()); // Автоматический сбор HTTP метрик
+        app.UseMetricServer(); // Открывает эндпоинт `/metrics` для Prometheus
+
+        app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapControllers();
+            endpoints.MapMetrics(); // Добавление метрик к маршрутам
+        });
         app.UseSwagger();
         app.UseSwaggerUI();
     }
